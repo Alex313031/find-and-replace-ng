@@ -2,7 +2,7 @@
   "name": "find-and-replace",
   "main": "./lib/find",
   "description": "Find and replace within buffers and across the project.",
-  "version": "0.220.1",
+  "version": "0.220.2",
   "license": "MIT",
   "activationCommands": {
     "atom-workspace": [
@@ -26,7 +26,7 @@
       "find-and-replace:clear-history"
     ]
   },
-  "repository": "https://github.com/atom/find-and-replace",
+  "repository": "https://github.com/Alex313031/find-and-replace-ng",
   "engines": {
     "atom": "*"
   },
@@ -36,20 +36,20 @@
     "test.lint": "eslint ."
   },
   "dependencies": {
-    "binary-search": "^1.3.3",
-    "etch": "0.9.3",
-    "fs-plus": "^3.0.0",
-    "temp": "^0.8.3",
-    "underscore-plus": "1.x"
+    "binary-search": "^1.3.6",
+    "etch": "0.9.5",
+    "fs-plus": "^3.1.1",
+    "temp": "^0.9.4",
+    "underscore-plus": "1.7.0"
   },
   "devDependencies": {
-    "dedent": "^0.6.0",
-    "eslint": "6",
-    "eslint-config-atomic": "^1.18.1"
+    "dedent": "^0.7.0",
+    "eslint": "7",
+    "eslint-config-atomic": "^1.18.3"
   },
   "pnpm": {
     "overrides": {
-      "eslint": "6"
+      "eslint": "7"
     }
   },
   "consumedServices": {
