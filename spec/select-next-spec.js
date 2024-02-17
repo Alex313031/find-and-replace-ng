@@ -1,10 +1,11 @@
 /** @babel */
 
 const path = require('path');
+const SelectNext = require('../lib/select-next');
 const dedent = require('dedent');
 
 describe("SelectNext", () => {
-  let workspaceElement; let editorElement; let editor;
+  let workspaceElement, editorElement, editor;
 
   beforeEach(async () => {
     workspaceElement = atom.views.getView(atom.workspace);
@@ -30,7 +31,9 @@ describe("SelectNext", () => {
 
     describe("when a word is selected", () => {
       describe("when the selection was created using select-next", () => {
-        it("selects the next occurrence of the selected word skipping any non-word matches", async () => {
+        beforeEach(() => {});
+
+        it("selects the next occurrence of the selected word skipping any non-word matches", () => {
           editor.setText(dedent`
             for
             information
@@ -361,7 +364,7 @@ describe("SelectNext", () => {
 
   describe("find-and-replace:select-undo", () => {
     describe("when there is no selection", () => {
-      it("does nothing", async () => {
+      it("does nothing", () => {
         editor.setText(dedent`
           for
           information
